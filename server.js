@@ -7,7 +7,14 @@ const express = require('express')
 const unsplash = new Unsplash({
   applicationId: config.get('APPLICATION_ID'),
   secret: config.get('SECRET'),
-  callbackUrl: config.get('CALLBACK_URL')
+  callbackUrl: config.get('CALLBACK_URL'),
 })
 
 const app = express()
+
+app.get('/api/photos', (req, res) => {
+  unsplash.photos
+    .listPhotos(1, 30)
+    .then(toJson)
+    .then((json) => res.json(json))
+})
