@@ -18,3 +18,5 @@ app.get('/api/photos', (req, res) => {
     .then(toJson)
     .then((json) => res.json(json))
 })
+
+const PORT = process.env.PORT || 5000
