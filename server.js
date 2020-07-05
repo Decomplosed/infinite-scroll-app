@@ -9,3 +9,5 @@ const unsplash = new Unsplash({
   secret: config.get('SECRET'),
   callbackUrl: config.get('CALLBACK_URL')
 })
+
+const app = express()
