@@ -4,7 +4,9 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 
 export class Images extends Component {
   state = {
-    
+    images: [],
+    count: 30,
+    start: 1,
   }
 
   render() {
