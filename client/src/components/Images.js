@@ -9,6 +9,8 @@ export class Images extends Component {
     start: 1,
   }
 
+  componentDidMount() {}
+
   render() {
     return <div></div>
   }
