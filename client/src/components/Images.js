@@ -9,7 +9,9 @@ export class Images extends Component {
     start: 1,
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    const { count, start } = this.state
+  }
 
   render() {
     return <div></div>
