@@ -21,6 +21,9 @@ export class Images extends Component {
   fetchImages = () => {
     const { count, start } = this.state
     this.setState({ start: this.state.start + count })
+    axios
+      .get(`/api/photos?count=${count}&start=${start}`)
+      .then((res) => this.setState({ images: res.data }))
   }
 
   render() {
