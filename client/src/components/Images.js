@@ -23,7 +23,9 @@ export class Images extends Component {
     this.setState({ start: this.state.start + count })
     axios
       .get(`/api/photos?count=${count}&start=${start}`)
-      .then((res) => this.setState({ images: res.data }))
+      .then((res) =>
+        this.setState({ images: res.state.images.concat(res.data) })
+      )
   }
 
   render() {
