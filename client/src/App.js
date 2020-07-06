@@ -20,7 +20,7 @@ function App() {
               alt='loading'
             />
 
-            <div className='images'></div>
+            <Images />
           </div>
         </div>
       </div>
