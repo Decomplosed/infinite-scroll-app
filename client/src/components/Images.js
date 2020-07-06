@@ -20,6 +20,7 @@ export class Images extends Component {
 
   fetchImages = () => {
     const { count, start } = this.state
+    this.setState({ start: this.state.start + count })
   }
 
   render() {
