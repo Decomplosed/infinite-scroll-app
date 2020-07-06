@@ -11,6 +11,7 @@ export class Images extends Component {
 
   componentDidMount() {
     const { count, start } = this.state
+    axios.get(`/api/photos?count=${count}&start=${start}`)
   }
 
   render() {
