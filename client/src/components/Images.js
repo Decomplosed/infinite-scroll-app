@@ -18,6 +18,10 @@ export class Images extends Component {
       .then((res) => this.setState({ images: res.data }))
   }
 
+  fetchImages = () => {
+    const { count, start } = this.state
+  }
+
   render() {
     console.log(this.state)
     const { images } = this.state
