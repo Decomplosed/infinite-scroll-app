@@ -17,7 +17,12 @@ export class Images extends Component {
   }
 
   render() {
-    return <div></div>
+    console.log(this.state)
+    return (
+      <div className='images'>
+        <InfiniteScroll></InfiniteScroll>
+      </div>
+    )
   }
 }
 
