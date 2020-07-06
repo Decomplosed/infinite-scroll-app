@@ -21,7 +21,12 @@ export class Images extends Component {
     const { images } = this.state
     return (
       <div className='images'>
-        <InfiniteScroll dataLength={images.length}></InfiniteScroll>
+        <InfiniteScroll
+          dataLength={images.length}
+          next={this.fetchImages}
+          hasMore={true}
+          loader={<h4>Loading...</h4>}
+        ></InfiniteScroll>
       </div>
     )
   }
