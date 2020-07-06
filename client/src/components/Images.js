@@ -26,7 +26,11 @@ export class Images extends Component {
           next={this.fetchImages}
           hasMore={true}
           loader={<h4>Loading...</h4>}
-        ></InfiniteScroll>
+        >
+          {images.map((image) => (
+            <Image key={image.id} image={image} />
+          ))}
+        </InfiniteScroll>
       </div>
     )
   }
